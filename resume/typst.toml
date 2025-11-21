@@ -1,0 +1,6 @@
+[package]
+name = "resume"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["0x1B05"]
+description = "resume template"
