@@ -176,7 +176,7 @@
       strong(it)
     }
 
-    outline(title: "Table of Contents", indent: 2em)
+    outline(title: "Table of Contents", indent: 2em, depth: 4)
     pagebreak()
   }
 
