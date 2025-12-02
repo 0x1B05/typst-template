@@ -66,7 +66,7 @@ chmod +x install.sh
 ```typst
 #import "@local/assignment:0.1.0": *
 
-#show: assignment_class.with(
+#show: assignment.with(
   title: "Homework 1",
   course_id: "CS101",
   // ...
