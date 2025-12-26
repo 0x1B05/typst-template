@@ -114,6 +114,12 @@
   // D. 数学公式
   // set math.equation(numbering: "(1)")
 
+  // E. 链接
+  show link: it => {
+    set text(fill: colors.primary)
+    underline(stroke: 0.5pt + colors.primary, offset: 1.5pt)[#it]
+  }
+
   // --- 封面页 ---
   align(center)[
     #v(2cm)
