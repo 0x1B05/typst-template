@@ -10,6 +10,7 @@
 | **Assignment**    | `assignment`        | `0.1.0` | 适用于作业、实验报告。包含独立的封面页、题目(`task`)和提示(`tip`)盒子。 |
 | **Resume**        | `resume`            | `0.1.0` | 适用于个人简历。支持中英混排、头像布局调整及 FontAwesome 图标。         |
 | **Cheatsheet**    | `cheatsheet`        | `0.1.0` | 适用于考试速查表、公式小抄。A4横向三栏紧凑布局，集成代码与表格优化。    |
+| **Diary**         | `diary`             | `0.1.0` | 适用于日记、每日记录。支持按天自动分页、轻量分区和常用复盘卡片。       |
 
 > ⚠️ **注意**：版本号可能会随 `typst.toml` 更新，请以实际文件为准。
 
@@ -38,6 +39,7 @@ chmod +x install.sh
 **脚本功能：**
 
 - 自动识别包名和版本号。
+- 不依赖当前工作目录，从仓库任意位置调用都可用。
 - 自动清理旧的无效链接。
 - 支持增量更新（修改模板代码后无需重新运行，除非修改了版本号）。
 - 自动忽略 `examples` 等非模板目录。
@@ -97,6 +99,28 @@ chmod +x install.sh
 )
 ```
 
+### 5. 日记 (Diary)
+
+```typst
+#import "@local/diary:0.1.0": *
+
+#show: diary
+
+#day(date: "2026-04-02")[
+  #section("今日记事")
+
+  今天开始把 diary 样式收进本地包。
+
+  #success[
+    + 把重复样式抽出来了
+  ]
+
+  #tomorrow[
+    + 继续补完本月内容
+  ]
+]
+```
+
 👉 **查看示例**：你可以参考 `examples/` 文件夹下的 `.typ` 文件，了解每个模板的具体用法和效果。
 
 ## 🛠️ 字体依赖 (Prerequisites)
@@ -120,6 +144,10 @@ chmod +x install.sh
 ├── assignment/         # [模板] 作业
 │   ├── lib.typ         # 核心逻辑
 │   └── typst.toml      # 包配置
+├── diary/              # [模板] 日记
+│   ├── lib.typ
+│   ├── README.md
+│   └── typst.toml
 ├── notes/              # [模板] 笔记
 │   ├── lib.typ
 │   └── typst.toml
@@ -127,9 +155,15 @@ chmod +x install.sh
 │   ├── icons/          # 简历专用图标资源
 │   ├── lib.typ
 │   └── typst.toml
-└── cheatsheet/         # [模板] 速查表
-    ├── lib.typ
-    └── typst.toml
+├── cheatsheet/         # [模板] 速查表
+│   ├── lib.typ
+│   └── typst.toml
+└── examples/
+    ├── assignment/
+    ├── cheatsheet/
+    ├── diary/
+    ├── notes/
+    └── resume/
 ```
 
 ## 🤝 开发与维护
