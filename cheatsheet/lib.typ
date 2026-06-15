@@ -1,6 +1,6 @@
-#import "@preview/theorion:0.4.1": *
+#import "@preview/theorion:0.6.0": *
 #import "@preview/codly:1.3.0": codly, codly-init
-#import "@preview/codly-languages:0.1.1": codly-languages
+#import "@preview/codly-languages:0.1.10": codly-languages
 #import "@preview/tablem:0.3.0": tablem, three-line-table
 
 #let default-colors = (

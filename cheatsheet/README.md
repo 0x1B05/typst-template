@@ -18,9 +18,9 @@
 
 本模板依赖以下 Typst 官方 Preview 包（编译时会自动下载）：
 
-- `@preview/theorion:0.4.1`
+- `@preview/theorion:0.6.0`
 - `@preview/codly:1.3.0`
-- `@preview/codly-languages:0.1.1`
+- `@preview/codly-languages:0.1.10`
 - `@preview/tablem:0.3.0`
 
 ## 🚀 快速开始

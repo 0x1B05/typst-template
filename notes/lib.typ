@@ -1,6 +1,6 @@
-#import "@preview/theorion:0.4.1": *
+#import "@preview/theorion:0.6.0": *
 #import "@preview/codly:1.3.0": codly, codly-init
-#import "@preview/codly-languages:0.1.1": codly-languages
+#import "@preview/codly-languages:0.1.10": codly-languages
 #import "@preview/tablem:0.3.0": tablem, three-line-table
 
 #let default-colors = (
@@ -64,7 +64,7 @@
       #set align(center)
       #set text(size: 20pt, weight: "bold", fill: colors.primary)
       #upper(it.body)
-      #v(1em)
+      #v(.5em)
       #line(length: 60%, stroke: 2pt + colors.primary)
     ]
     v(1.5em)
@@ -75,7 +75,6 @@
     block[
       #set text(size: 16pt, weight: "bold", fill: colors.secondary)
       #it.body
-      #v(0.5em)
       #line(length: 100%, stroke: 1pt + colors.secondary)
     ]
     v(1em)
@@ -174,7 +173,6 @@
   ]
 
   pagebreak()
-
 
   if toc {
     show outline.entry.where(level: 1): it => {
